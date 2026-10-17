@@ -1,0 +1,41 @@
+sku,description,category,supplier,unit_cost_usd,pallet_qty,lead_time_weeks,moq
+SP-BRG-4507,"Bearing, CP-400",BRG,Brightline Bearings,139.57,200,2,25
+SP-IMP-4461,"Impeller, CP-200",IMP,Halvard Castings,657.5,12,5,4
+SP-BRG-1289,"Bearing, CP-200",BRG,Brightline Bearings,157.45,200,2,25
+SP-IMP-0688,"Impeller, CP-200",IMP,Halvard Castings,508.06,12,5,4
+SP-CPL-7434,"Coupling, GB-20",CPL,Keystone MRO Supply,167.08,80,1,10
+SP-IMP-7577,"Impeller, CP-200",IMP,Halvard Castings,1490.3,12,6,4
+SP-SEAL-6545,"Mechanical seal, CP-400",SEAL,Pellum Seal Co.,307.95,60,3,10
+SP-BRG-5007,"Bearing, CP-400",BRG,Brightline Bearings,193.47,200,2,25
+SP-BRG-7856,"Bearing, GB-20",BRG,Brightline Bearings,50.62,,3,25
+SP-SEAL-0900,"Mechanical seal, CP-100",SEAL,Pellum Seal Co.,260.18,60,4,10
+SP-SEAL-0868,"Mechanical seal, GB-40",SEAL,Pellum Seal Co.,406.68,60,3,10
+SP-WRG-3709,"Wear ring, CP-400",WRG,Halvard Castings,135.39,100,5,20
+SP-GSK-2278,"Gasket kit, GB-40",GSK,Pellum Seal Co.,12.49,500,2,100
+SP-GSK-0647,"Gasket kit, GB-20",GSK,Pellum Seal Co.,32.6,500,2,100
+SP-GSK-4507,"Gasket kit, CP-200",GSK,Pellum Seal Co.,34.55,500,2,100
+SP-CPL-1550,"Coupling, CP-200",CPL,Keystone MRO Supply,284.65,80,1,10
+SP-SEAL-4334,"Mechanical seal, GB-40",SEAL,Pellum Seal Co.,599.92,60,4,10
+SP-IMP-8931,"Impeller, CP-100",IMP,Halvard Castings,1296.15,12,5,4
+SP-BRG-3713,"Bearing, GB-20",BRG,Brightline Bearings,145.89,200,2,25
+SP-WRG-3263,"Wear ring, CP-400",WRG,Halvard Castings,114.46,100,6,20
+SP-SEAL-8584,"Mechanical seal, GB-40",SEAL,Pellum Seal Co.,453.12,60,4,10
+SP-CPL-0447,"Coupling, CP-100",CPL,Keystone MRO Supply,282.62,80,1,10
+SP-GSK-8878,"Gasket kit, GB-40",GSK,Pellum Seal Co.,8.8,,2,100
+SP-WRG-4700,"Wear ring, CP-100",WRG,Halvard Castings,191.33,100,6,20
+SP-SEAL-6976,"Mechanical seal, CP-100",SEAL,Pellum Seal Co.,569.83,60,3,10
+SP-IMP-9704,"Impeller, CP-200",IMP,Halvard Castings,849.02,12,5,4
+SP-CPL-5468,"Coupling, CP-200",CPL,Keystone MRO Supply,239.04,80,2,10
+SP-CPL-6832,"Coupling, CP-200",CPL,Keystone MRO Supply,94.53,80,1,10
+SP-GSK-0930,"Gasket kit, CP-100",GSK,Pellum Seal Co.,9.77,500,2,100
+SP-SEAL-7736,"Mechanical seal, CP-200",SEAL,Pellum Seal Co.,417.13,60,4,10
+SP-CPL-4979,"Coupling, GB-20",CPL,Keystone MRO Supply,159.9,80,2,10
+SP-BRG-1833,"Bearing, CP-100",BRG,Brightline Bearings,206.1,200,3,25
+SP-SEAL-4392,"Mechanical seal, GB-20",SEAL,Pellum Seal Co.,546.13,60,4,10
+SP-IMP-7004,"Impeller, CP-200",IMP,Halvard Castings,1167.48,12,5,4
+SP-BRG-5133,"Bearing, CP-400",BRG,Brightline Bearings,95.59,200,2,25
+SP-IMP-3549,"Impeller, CP-400",IMP,Halvard Castings,794.03,12,5,4
+SP-BRG-8394,"Bearing, CP-100",BRG,Brightline Bearings,170.96,200,2,25
+SP-WRG-0772,"Wear ring, CP-100",WRG,Halvard Castings,213.37,100,6,20
+SP-GSK-5548,"Gasket kit, CP-400",GSK,Pellum Seal Co.,33.44,500,2,100
+SP-WRG-9052,"Wear ring, CP-100",WRG,Halvard Castings,186.04,100,5,20

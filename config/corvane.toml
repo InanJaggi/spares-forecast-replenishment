@@ -1,0 +1,49 @@
+# Corvane Industrial spares replenishment settings.
+# Every number here is an assumption I set for the synthetic engagement. On a real
+# engagement these come from the planning team, finance (carrying rate, budget)
+# and the freight contract.
+
+[data]
+seed = 42
+start_week = "2025-01-06"      # first Monday of history
+n_weeks = 93                   # through the week of 2026-10-12
+n_skus = 40
+dcs = ["DC-CMH", "DC-DFW", "DC-ATL"]
+
+[forecast]
+season_length = 13             # 13-week cycle from customers' quarterly PM schedules
+cv_horizon = 4                 # weeks ahead per backtest window
+cv_windows = 6                 # rolling-origin windows (6 x 4 = last 24 weeks)
+holdout_weeks = 13             # weeks replayed in the simulation
+
+[policy]
+service_level = 0.95           # target cycle service level for safety stock
+review_period_weeks = 1        # plan is re-run weekly
+
+[costs]
+holding_rate_annual = 0.25     # carrying cost as a share of unit cost per year
+shortage_pct_of_cost = 0.60    # lost margin + customer penalty per unit short
+shortage_fixed_usd = 25.0      # expedite freight per unit short
+ss_shortfall_share = 0.20      # each unit-week below safety stock costs 20% of a lost sale
+order_line_usd = 40.0          # PO admin + receiving per order line
+freight_per_pallet_usd = 55.0  # Ridgeway Freight shuttle rate per inbound pallet
+
+[capacity]
+truck_pallets = 12             # 26 ft box truck, single-stacked pallets
+max_trucks_per_week = { "DC-CMH" = 2, "DC-DFW" = 1, "DC-ATL" = 1 }   # receiving dock slots
+weekly_budget_usd = 250000.0   # Corvane-wide purchase budget per order week
+
+[plan]
+order_weeks = 4                # weeks of orders in the plan
+solver_time_limit_s = 10.0     # production plan
+sim_time_limit_s = 3.0         # each weekly re-plan in the holdout replay
+solver_workers = 8
+relative_gap_limit = 0.01      # stop when within 1% of the proven bound
+
+[hand_rule]
+# The current manual process: a blanket weeks-of-supply min/max per SKU-DC.
+trailing_weeks = 26
+min_weeks = 4
+max_weeks = 10
+sweep_min_weeks = [2, 4, 6, 8, 10]   # extra hand-rule settings for the trade-off chart
+sweep_gap_weeks = 6                  # max = min + gap in the sweep
