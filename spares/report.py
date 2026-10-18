@@ -151,7 +151,7 @@ def write_report(path: Path, *, cfg, cleaning, items, demand, rolling, fc, selec
         ("Average inventory value, slow movers", usd(o["avg_inventory_value_slow"]), usd(hr["avg_inventory_value_slow"])),
         ("Holding + ordering + shortage cost", usd(o["total_cost_usd"]), usd(hr["total_cost_usd"])),
         ("Purchase spend in the window", usd(o["purchase_spend_usd"]), usd(hr["purchase_spend_usd"])),
-        ("Order lines / trucks", f"{o['order_lines']} / {o['trucks']}", f"{hr['order_lines']} / {hr['trucks']}"),
+        ("Order lines / pallets", f"{o['order_lines']} / {o['pallets']}", f"{hr['order_lines']} / {hr['pallets']}"),
         ("Dock-weeks over truck capacity", str(o["dock_weeks_over_capacity"]), str(hr["dock_weeks_over_capacity"])),
         ("Order weeks over budget", str(o["weeks_over_budget"]), str(hr["weeks_over_budget"])),
     ]
@@ -226,13 +226,13 @@ point = forecast over lead time + review week + safety stock. Total safety stock
                    'safety_stock_value_usd': usd})}
 
 <h2>4. Replenishment plan (CP-SAT)</h2>
-<p>One model for all three DCs: holding + order-line + truck + shortage cost, plus a soft penalty below safety
+<p>One model for all three DCs: holding + order-line + freight-per-pallet + shortage cost, plus a soft penalty below safety
 stock, subject to MOQ, pallets per box truck ({cfg['capacity']['truck_pallets']}), dock limits per DC-week and a
 {usd(cfg['capacity']['weekly_budget_usd'])} purchase budget per order week. Status {res.status} in
 {res.wall_time_s:.1f}s, gap to bound {(res.objective_usd - res.bound_usd) / res.objective_usd:.1%}.
 Cost split: holding {usd(res.costs['holding_usd'])}, shortage {usd(res.costs['shortage_usd'])}, below safety
-stock {usd(res.costs['below_ss_usd'])}, order lines {usd(res.costs['order_lines_usd'])}, trucks
-{usd(res.costs['trucks_usd'])}. Much of the shortage cost is in weeks before any new order can arrive.</p>
+stock {usd(res.costs['below_ss_usd'])}, order lines {usd(res.costs['order_lines_usd'])}, freight
+{usd(res.costs['freight_usd'])}. Much of the shortage cost is in weeks before any new order can arrive.</p>
 {_table(plan_sum, {'value': usd, 'units': lambda v: f'{v:,.0f}'}, 'narrow')}
 <figure><img src="{chart_plan(trucks, cfg)}" alt="Inbound pallets per DC and week against dock limits">
 <figcaption>Inbound pallets per DC and arrival week: open POs already on the way (gray) and new orders from
