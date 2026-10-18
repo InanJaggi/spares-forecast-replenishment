@@ -1,7 +1,0 @@
-$ .venv/Scripts/python.exe upstream_smoke/ortools_simple_sat_program.py
-# run 2026-10-17T00:05:44-04:00
-ortools 9.15.6755
-x = 1
-y = 0
-z = 0
-exit code 0

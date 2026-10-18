@@ -1,11 +1,8 @@
+Copyright 2026 Inan Jaggi
+
 This project uses two Apache-2.0 libraries as unmodified, pinned pip dependencies:
 
 - statsforecast (Nixtla), https://github.com/Nixtla/statsforecast, Apache License 2.0
 - OR-Tools (Google LLC), https://github.com/google/or-tools, Apache License 2.0
 
-No upstream library files are copied or modified in this repository.
-upstream_smoke/ortools_simple_sat_program.py is the official OR-Tools sample
-ortools/sat/samples/simple_sat_program.py (Copyright 2010-2025 Google LLC,
-Apache-2.0), modified by adding one version print line.
-upstream_smoke/statsforecast_quickstart.py reproduces the README quick-start
-example of statsforecast, modified by adding print and timing lines.
+No library files are copied or modified in this repository.

@@ -28,7 +28,7 @@ Forecast accuracy (WAPE, pooled; lower is better):
 
 Mean MASE on the holdout: 1.090 for seasonal naive, 0.949 for the chosen models.
 
-Holdout replay, 120 SKU-DCs x 13 weeks, simulated on synthetic demand (`out/simulation_summary.csv`):
+Holdout replay, 120 SKU-DCs x 13 weeks, simulated on synthetic demand (`docs/sample_output/simulation_summary.csv`):
 
 | | optimized | hand rule 4/10 weeks |
 | --- | --- | --- |
@@ -42,7 +42,7 @@ Holdout replay, 120 SKU-DCs x 13 weeks, simulated on synthetic demand (`out/simu
 What this says, plainly: the optimized policy holds 40% less inventory and never breaks the budget
 or dock limits, but it loses 2.8 points of fill rate against the 4/10 hand rule, and with my shortage
 penalty that costs more in total. Against the hand rule set to a similar inventory level (2/8 weeks:
-87.9% fill rate, $584,085, from `out/hand_rule_sweep.csv`) it is better on both. The weekly CP-SAT
+87.9% fill rate, $584,085, from `docs/sample_output/hand_rule_sweep.csv`) it is better on both. The weekly CP-SAT
 re-plans stop at a 3 s limit and end with a mean 43% gap to the proven bound, so the replay
 understates what the model can do with more solve time. The production plan (10 s) ends 5.6% from
 the bound: 121 order lines worth $704,854 for the weeks starting 2026-10-19.
@@ -83,12 +83,11 @@ Settings (costs, budget, dock limits, service level, hand rule) live in `config/
 7. `spares/report.py` writes the static HTML report with matplotlib charts; `spares/pipeline.py` runs
    everything.
 
-## What's upstream and what I built
+## Built on
 
 Upstream, used as pinned pip dependencies and not modified (both Apache-2.0, see `NOTICE`):
 statsforecast 2.1.1 (all forecasting models and `cross_validation`) and OR-Tools 9.15.6755 (the
-CP-SAT solver). `upstream_smoke/` holds the two documentation examples I ran first to prove the
-install (`docs/upstream_smoke_*.txt`); the OR-Tools one is Google's sample with one added print line.
+CP-SAT solver).
 
 I wrote: `spares/` (config, generate, adapter, forecast, policy, optimize, simulate, report,
 pipeline), `config/corvane.toml`, `tests/test_spares.py`, and the docs. The segmentation, model

@@ -5,7 +5,7 @@
 [  91.1s] holdout replay: hand rule and sweep simulated
 [ 108.8s] production: chosen models refit on all 93 weeks, 10-week forecast done
 [ 119.8s] production: CP-SAT plan FEASIBLE, objective $168,670, bound $159,238, 10.0s
-[ 125.7s] wrote C:\Users\inanj\Downloads\INAN PORTFOLIO\fde-projects\spares-forecast-replenishment\out\plan.csv (121 order lines) and C:\Users\inanj\Downloads\INAN PORTFOLIO\fde-projects\spares-forecast-replenishment\out\report.html
+[ 125.7s] wrote .\out\plan.csv (121 order lines) and .\out\report.html
 
 Forecast accuracy (WAPE / mean MASE, lower is better)
   backtest before holdout : selected 0.361 / 0.946   seasonal naive 0.470 / 1.139
