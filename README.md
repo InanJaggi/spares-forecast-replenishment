@@ -1,5 +1,7 @@
 # Spares forecast and replenishment for Corvane Industrial
 
+[![tests](https://github.com/InanJaggi/spares-forecast-replenishment/actions/workflows/tests.yml/badge.svg)](https://github.com/InanJaggi/spares-forecast-replenishment/actions/workflows/tests.yml)
+
 A weekly planning pipeline for spare parts across three distribution centers. I forecast demand with
 Nixtla's statsforecast, turn forecast error into safety stock, and build the replenishment plan with
 one CP-SAT model from Google OR-Tools. A replay of 13 held-out weeks compares it with the current
